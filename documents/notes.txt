@@ -1,0 +1,40 @@
+My Approach:
+
+1.Generate a new react app.
+
+2.Install dependencies (react-router-dom, react-redux)
+
+3.Additional dependencies:
+-redux to use createStore and combineReducers
+-redux-devtools-extension to use redux devtools for testing/error checking
+
+4.Setup 3 src/folders
+-actions
+-reducers
+-components
+
+5.create store.js in src file
+
+6.Create 3 components in src/components
+-homepage.js(class)
+-countpage.js(class)
+-counter.js(functional)
+
+7.Incorporate Provider(passing store) and Routes in App.js
+
+8.Build Components:
+Strategy: The idea is to have the 2 page components setup as navigation routes,
+each component has a button to Link to the other page. Both of these
+page components import the counter component which displays the counter.
+The page components are class components in order to use a lifecycle method
+to trigger the action which increments the count number in state. The counter
+component is a functional component which receives the state value as a prop
+and simply outputs to the screen. When the home page loads the first time, it will
+avoid the lifecycle method because of an if statement that checks the state value.
+
+9.The page components use connect function from 'react-redux' where I use
+mapStateToProps and mapDispatchToProps to connect the application to the redux
+functionality and state variables.
+
+9. Some basic styling done with bootstrap classes to save you eyes from the ugly
+default HTML =)
